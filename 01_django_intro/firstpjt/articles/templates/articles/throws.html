@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Throws</h1>
+<form action="{% url 'articles:catch' %}" method="GET">
+    <label for="message">Throws</label>
+    <input type="text" name="message" id="message">
+    <label for="mes1">Throws2</label>
+    <input type="text" name="mes1" id="mes1">
+    <input type="submit" value="제출">
+</form>
+
+<a href="{% url 'articles:index' %}">뒤로가기</a>
+
+{% endblock content %}

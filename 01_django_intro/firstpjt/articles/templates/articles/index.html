@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <h1>INDEX</h1>
+    <ul>
+        <li><a href="{% url 'articles:hello' 'anonymous' %}">hello</a></li>
+        <li><a href="{% url 'articles:dinner' %}">dinner</a></li>
+        <li><a href="{% url 'articles:greeting' %}">greeting</a></li>
+        <li><a href="{% url 'articles:throws' %}">throws</a></li>
+        <li><a href="{% url 'pages:index' %}">page의 인덱스로 고고</a></li>
+    </ul>
+{% endblock content %}
+
+
+
+
