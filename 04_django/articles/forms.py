@@ -19,6 +19,35 @@ from .models import Article
 
 class ArticleForm(forms.ModelForm):
 
+    title = forms.CharField(
+        label='제목',
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'my-title form-control',
+                'placeholder' : 'Enter the title',
+                'maxlength' : 10,  # 여기서 maxlength는 유효성 검사에 영향을 주지 않는다.. 다만 입력할때 10자 이상으로 입력할 수 없도록 제한
+
+
+
+            }
+        )
+    )
+    content = forms.CharField(
+        label='내용',
+        widget=forms.Textarea(
+            attrs={
+                'class' : 'my-content form-control',
+                'placeholder' : 'Enter the content',
+                'rows' : 5,
+                'cols' : 50,
+
+            }
+        ),
+        error_messages={
+            'required' : 'please enter your content',
+        }
+    )
+
     class Meta:
         model = Article # 어떤 모델을 기반으로 할지
         fields = '__all__' # 사용자로부터 입력받은 모든 필드들
