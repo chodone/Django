@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  <form action="{% url 'memos:create' %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}   
+    {% comment %} <label for="title">Title: </label>
+    <input type="text" name="title" id="title"><br>
+    <label for="content">Content: </label>
+    <textarea type="text" name="content" id="content"></textarea><br> {% endcomment %}
+    <input type="submit">
+  </form>
+  <hr>
+  <a href="{% url 'memos:index' %}">뒤로가기</a>
+{% endblock content %}
