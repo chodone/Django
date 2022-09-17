@@ -38,7 +38,7 @@
     - Model - View - Controller의 준말
 - **MTV**
 
-  - ![MTV](.\img\img/MTV.jpeg)
+  ![MTV](./img/MTV.jpeg)
   - Model - Template - View 의 준말
   - Django에서는 MTC 패턴을 사용
   - Model
